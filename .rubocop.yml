@@ -1,0 +1,38 @@
+# ref:
+# https://github.com/rubocop/rubocop/blob/master/config/default.yml
+# https://gist.github.com/linyows/ace586b118f87291ed3e
+
+# 自動生成されるものはチェック対象から除外する
+AllCops:
+  DisabledByDefault: true
+  Exclude:
+    - "vendor/**/*" # rubocop config/default.yml
+    - "db/schema.rb"
+  DisplayCopNames: true
+  NewCops: enable
+
+#################### Style ###############################
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: true
+
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+#################### Layout ###########################
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+  AllowAdjacentOneLineDefs: true
+
+#################### Lint ##################################
+
+
+##################### Metrics ##################################
+
+
