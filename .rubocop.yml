@@ -19,7 +19,7 @@ Style/Documentation:
   Enabled: false
 
 Style/EmptyMethod:
-  Enabled: true
+  Enabled: false
 
 # 日本語のコメントを許可する
 Style/AsciiComments:
