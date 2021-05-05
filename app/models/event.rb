@@ -8,6 +8,14 @@ class Event < ApplicationRecord
   validates :end_at, presence: true
   validate :start_at_shoud_be_before_end_at
 
+  def created_by?(user)
+    # userがfalseならばfalseを返す
+    return false unless user
+    # userがtrue、かつowner_idとuser.idが同じならtrueを返す
+    # userがtrue、かつowner_idとuser.idが違えばfalseを返す
+    owner_id == user.id
+  end
+
   private
 
   def start_at_shoud_be_before_end_at
